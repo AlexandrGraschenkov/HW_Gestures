@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -16,15 +16,29 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="RLa-LM-L4Q" appends="YES" id="sSV-tP-SUj"/>
+                                    <outletCollection property="gestureRecognizers" destination="g5u-8x-gvd" appends="YES" id="Jzm-PD-iy6"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="imgView" destination="YDb-az-6Qp" id="yZL-GL-QN9"/>
+                        <outlet property="imageView" destination="YDb-az-6Qp" id="i6B-db-iPa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="up" id="RLa-LM-L4Q">
+                    <connections>
+                        <action selector="swipeUp:" destination="vXZ-lx-hvc" id="fuF-Xu-71y"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="g5u-8x-gvd">
+                    <connections>
+                        <action selector="swipeDown:" destination="vXZ-lx-hvc" id="a17-bq-alU"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
         </scene>
     </scenes>
