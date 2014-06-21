@@ -9,7 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-@property (nonatomic, weak) IBOutlet UIImageView *imgView;
+@property (weak, nonatomic) IBOutlet UIImageView *imgView;
 @end
 
 @implementation ViewController
@@ -19,7 +19,35 @@
 {
     [super viewDidLoad];
     
-    // ниче нет, пусто!
+    imgView.image = [UIImage imageNamed:@"gesture1.png"];
+}
+
+-(IBAction)action:(UIPanGestureRecognizer *)sender {
+    
+    
+    int img = 1;
+    
+    if (sender.state == UIGestureRecognizerStateChanged) {
+   
+   img = [sender locationInView:self.imgView].y/40;
+   
+   //NSLog(@"%f", [sender locationInView:self.imgView].y);
+   
+   if(img < 1) {
+   
+           img = 1;
+   
+  } else if (img > 12) {
+  
+          img = 12;
+  	
+      }
+   
+   imgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"gesture%d.png",img]];
+   
+        }
+    
+    
 }
 
 @end
