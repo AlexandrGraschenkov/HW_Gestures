@@ -447,6 +447,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestGesture/TestGesture-Prefix.pch";
 				INFOPLIST_FILE = "TestGesture/TestGesture-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -460,6 +461,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestGesture/TestGesture-Prefix.pch";
 				INFOPLIST_FILE = "TestGesture/TestGesture-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -524,6 +526,7 @@
 				A8FA5956190EDF550017676C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A8FA5957190EDF550017676C /* Build configuration list for PBXNativeTarget "TestGestureTests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +535,7 @@
 				A8FA5959190EDF550017676C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
